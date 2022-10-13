@@ -1,0 +1,92 @@
+.section-neptune {
+  position: relative;
+  @media only screen and (max-width: $tablet) {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #server-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+    z-index: 1;
+
+    @media only screen and (max-width: $tablet) {
+      display: block;
+      position: relative;
+      min-height: 200px;
+      height: 40vh;
+      max-height: 40vh;
+    }
+  }
+}
+
+.card-neptune {
+  position: relative;
+  z-index: 2;
+  padding: 5vw 0;
+
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+    padding: 0;
+    background: #006d97 url("../images/neptune-gradient.png");
+    background-size: cover;
+  }
+
+  .image-container {
+    background: #ffffff url("../images/Server b-roll.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+
+    @media only screen and (max-width: $tablet) {
+      position: relative;
+      max-height: 40vh;
+    }
+  }
+
+  .text-container {
+    padding: 4vw 4vw;
+    color: #ffffff;
+    max-width: 770px;
+    background: #006d97 url("../images/neptune-gradient.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-left: 0;
+    margin-right: auto;
+    width: 50vw;
+
+
+    @media only screen and (max-width: $tablet) {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background: transparent;
+      max-width: 100%;
+      min-height: 60vh;
+      padding: 40px 10% 40px 10%;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      padding-bottom: 150px;
+    }
+  }
+
+  a {
+    color: #ffffff;
+  }
+}

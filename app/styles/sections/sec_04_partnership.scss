@@ -1,0 +1,163 @@
+.section-partnership {
+  position: relative;
+  background: #757a7c;
+
+  .image-container {
+    background: #a7b5af url("../images/lenovo-data-center-partnership-dreamworks-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 30vh;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    transition: background-position-y 1.6s ease, opacity 1.6s linear;
+    transition-delay: 0ms;
+
+    @media only screen and (max-width: $tablet) {
+      transition: background-position-y 1.1s ease, opacity 1.25s linear;
+      position: relative;
+      min-height: 270px;
+      height: 10vh;
+    }
+
+    &.active {
+      background-position-y: 0vh;
+      opacity: 1;
+    }
+
+    &.final-pos {
+      transition: background-position-y 0.75s ease, opacity 2.5s linear;
+      transition-delay: 0ms;
+      background-position-y: 0;
+
+      @media only screen and (max-width: $tablet) {
+        transition-delay: 0ms;
+        background-position-y: 0;
+        transition: background-position-y 0.375s ease, opacity 1.25s linear;
+      }
+    }
+
+    .silo {
+      opacity: 0;
+      width: 115%;
+      position: absolute;
+      bottom: 0;
+      left: -80vw;
+      transition: left 1.2s ease-in, margin-bottom 1.2s ease-in, opacity 1.2s linear;
+      transition-delay: 100ms;
+      min-width: 700px;
+
+      @media only screen and (max-width: $tablet) {
+        height: 100%;
+        min-width: 0;
+        transition: left 1.25s ease, margin-bottom 1.1s ease, opacity 1.1s linear;
+        width: auto;
+        left: -40vw;
+        height: 80%;
+      }
+    }
+
+    .silo.active {
+      opacity: 1;
+      left: -40vw;
+      transition: left 1.8s ease, margin-bottom 1.8s ease, opacity 1.2s linear;
+    }
+
+    .silo.bounce {
+      opacity: 1;
+      left: -40vw;
+      transition: left 1.8s ease, margin-bottom 1.6s ease, opacity 1.8s linear;
+    }
+
+    .silo.no-transition {
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+      -o-transition: none !important;
+      transition: none !important;
+      transition-delay: unset !important;
+      left: -40vw;
+    }
+  }
+
+  .desktop-legal {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    font-size: 14px;
+    color: white;
+
+    @media only screen and (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  .legal-image-text {
+    font-size: 10px;
+    margin-left: 20px;
+    line-height: 10px;
+  }
+}
+
+.card-partnership {
+  position: relative;
+  padding: 5vw 0;
+
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+    padding: 0;
+  }
+
+  .text-container {
+    padding: 4vw 4vw;
+    color: #ffffff;
+    max-width: 770px;
+    background: #006d97 url("../images/partnership-gradient.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-right: 0;
+    margin-left: auto;
+    width: 50vw;
+
+    @media only screen and (max-width: $tablet) {
+      padding: 40px 10% 80px 10%;
+      width: 100vw;
+      max-width: 100%;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      padding-bottom: 150px;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    .legal-container {
+      position: absolute;
+      left: 5vw;
+      bottom: 118px;
+      transform: rotate(-90deg);
+
+      @media only screen and (max-width: $tablet) {
+        bottom: auto;
+        top: -40px;
+        right: 30px;
+        transform: none;
+      }
+
+      @media only screen and (min-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+}
+

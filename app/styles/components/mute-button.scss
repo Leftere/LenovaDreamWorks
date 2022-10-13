@@ -1,0 +1,27 @@
+.mute-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    z-index: 10;
+    background-image: url('../images/sound-mute.png');
+    background-color: transparent;
+    border: none;
+    height: 35px;
+    width: 41px;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    cursor: pointer;
+    pointer-events: all;
+
+    @media only screen and (max-width: $mobile) {
+        height: 25px;
+        width: 30px;
+        bottom: 15px;
+        left: 20px;
+    }
+
+    &.unmute {
+        background-image: url('../images/sound-icon.png');
+    }
+}

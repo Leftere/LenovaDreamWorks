@@ -1,0 +1,313 @@
+.section-story {
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+  transition: all 700ms ease;
+
+  &.test {
+    transform: translateY(100vh);
+  }
+
+  .desktop-legal {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    font-size: 14px;
+    color: #cacaca;
+
+    @media only screen and (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  .br {
+    @media only screen and (max-width: $tablet) {
+      display: block;
+    }
+  }
+
+  .legal-image-text {
+    color: #cacaca;
+    margin-right: 40px;
+    line-height: 10px;
+    font-size: 10px;
+  }
+}
+
+.card-story {
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column-reverse;
+  }
+
+  .text-container {
+    margin-right: 75px;
+    flex: 1;
+
+    @media only screen and (max-width: $tablet) {
+      margin-right: 0px;
+    }
+  }
+
+  .image-container {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    height: 80vw;
+    max-height: 630px;
+    position: relative;
+
+    @media only screen and (max-width: $tablet) {
+      flex-direction: row-reverse;
+      justify-content: center;
+      margin-right: 30px;
+      width: 100%;
+    }
+
+    .center {
+      position: relative;
+    }
+
+    .legal-container {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.baby-snake {
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  right: 60vw;
+  transition-delay: 300ms;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+  width: 30%;
+  z-index: 2;
+  will-change: transform;
+
+  @media only screen and (max-width: $tablet) {
+    margin-left: -25px;
+    position: relative;
+    right: inherit;
+    -webkit-transform: translateX(25%);
+    transform: translateX(25%);
+    -webkit-transition: all .9s ease;
+    transition: all .9s ease;
+    width: 170px;
+  }
+
+  @media only screen and (max-width: $tabletPortrait) {
+    width: 140px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    width: 125px;
+  }
+
+  &.active {
+    opacity: 1;
+    right: 37vw;
+
+    @media only screen and (max-width: $tablet) {
+      right: inherit;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+}
+
+.badboy-wolf {
+  bottom: 25px;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  right: 60%;
+  transition-delay: 300ms;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+  width: 25%;
+  z-index: 2;
+  will-change: transform;
+
+  @media only screen and (max-width: $tablet) {
+    margin-left: -40px;
+    position: relative;
+    right: inherit;
+    -webkit-transform: translateX(25%);
+    transform: translateX(25%);
+    -webkit-transition: all .9s ease;
+    transition: all .9s ease;
+  }
+
+  &.active {
+    opacity: 1;
+    right: 60%;
+
+    @media only screen and (max-width: $tablet) {
+      right: inherit;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+}
+
+.baby-shark {
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  right: -10vw;
+  transition-delay: 300ms;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+  width: 60%;
+  z-index: 2;
+  will-change: transform;
+
+  @media only screen and (max-width: $tablet) {
+    margin-left: -20px;
+    position: relative;
+    right: inherit;
+    -webkit-transform: translateX(25%);
+    transform: translateX(25%);
+    -webkit-transition: all .9s ease;
+    transition: all .9s ease;
+    width: 170px;
+  }
+
+  @media only screen and (max-width: $tabletPortrait) {
+    width: 140px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    width: 125px;
+  }
+
+  &.active {
+    opacity: 1;
+    right: 10%;
+
+    @media only screen and (max-width: $tablet) {
+      right: inherit;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+}
+
+.baby-theo {
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  right: -10vw;
+  top: 0;
+  transition-delay: 300ms;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+  width: 40%;
+  z-index: 2;
+  will-change: transform;
+
+  @media only screen and (max-width: $tablet) {
+    margin: 0;
+    margin-left: -55px;
+    position: relative;
+    right: inherit;
+    -webkit-transform: translateX(25%);
+    transform: translateX(25%);
+    -webkit-transition: all .9s ease;
+    transition: all .9s ease;
+    width: 170px;
+  }
+
+  @media only screen and (max-width: $tabletPortrait) {
+    width: 140px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    width: 125px;
+  }
+
+  &.active {
+    opacity: 1;
+    right: 13%;
+
+    @media only screen and (max-width: $tablet) {
+      right: inherit;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+}
+
+.baby-tina {
+  bottom: 0;
+  left: -10vw;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+  transition-delay: 300ms;
+  width: 53%;
+  z-index: 1;
+  will-change: transform;
+
+  @media only screen and (max-width: $tablet) {
+    left: inherit;
+    margin: 0;
+    position: relative;
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+    transition: all .9s ease;
+    width: 230px;
+  }
+
+  @media only screen and (max-width: $tabletPortrait) {
+    width: 190px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    width: 175px;
+  }
+
+  &.active {
+    left: 10%;
+    opacity: 1;
+
+    @media only screen and (max-width: $tablet) {
+      left: inherit;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+}
+
+#story-legal-mob {
+  right: auto;
+  top: 0;
+  bottom: 0;
+  color: #cacaca;
+  display: flex;
+
+  .legal-image-text {
+    transform: rotate(-90deg);
+  }
+
+  @media only screen and (max-width: $tablet) {
+    bottom: auto;
+    top: 200px;
+    right: -115px;
+    left: auto;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    display: none;
+  }
+}

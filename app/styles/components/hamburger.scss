@@ -1,0 +1,22 @@
+.hamburger {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    fill: #FFFFFF;
+    width: 23px;
+    height: 19px;
+    transition: opacity 1s ease;
+
+    @media only screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.hamburger-purple, .hamburger-white {
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+}

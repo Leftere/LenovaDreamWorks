@@ -1,0 +1,28 @@
+.shape-wrap {
+  margin: -5px 0 0 0;
+  position: fixed;
+  top: -100vh;
+  width: 100%;
+  z-index: 10;
+  transition: opacity 2s ease;
+
+  @media only screen and (max-width: $tabletPortrait - 1), screen and (max-height: 600px) {
+    //display: none;
+    //top: inherit !important;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+.shape {
+  display: block;
+  height: 100vh;
+  width: 100%;
+
+  @media only screen and (max-width: $tabletPortrait - 1), screen and (max-height: 600px) {
+    //display: none;
+    //transform: none !important;
+  }
+}

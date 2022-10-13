@@ -1,0 +1,81 @@
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: url('../images/modal-bg-a.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 10vw;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+
+    &.active {
+        opacity: 0.98;
+        pointer-events: all;
+    }
+
+    @media only screen and (min-width: $tablet) {
+        display: none;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        text-decoration: none;
+        margin-top: 0;
+        margin-bottom: 20px;
+        opacity: .7;
+        cursor: pointer;
+        padding-left: 12px;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.active {
+            opacity: 1;
+            border-left: 3px solid $purple;
+            padding-left: 9px;
+        }
+
+        a {
+            color: #FFFFFF;
+        }
+    }
+
+    #close-menu-x {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+
+    .download-mobile-row {
+        position: relative;
+    }
+
+    .mobile-download-text {
+        position: absolute;
+        font-size: 20px;
+        top: -15px;
+        left: 61px;
+    }
+}

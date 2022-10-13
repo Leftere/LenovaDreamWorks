@@ -1,0 +1,146 @@
+.section-how-it-works {
+  background: #ffffff;
+
+  @media only screen and (max-width: $tablet) {
+    .fp-tableCell {
+      vertical-align: bottom;
+    }
+  }
+}
+
+.card-how-it-works {
+  background: #ffffff;
+
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+    padding: 0;
+    display: flex;
+  }
+  
+  .text-container {
+    max-width: 100%;
+    align-self: center;
+
+    @media only screen and (max-width: $tablet) {
+      align-self: flex-end;
+    }
+
+    h1 {
+      @media only screen and (max-width: $tablet) {
+        margin-left: 5vw;
+        margin-top: 5vw;
+        box-sizing: border-box;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        margin-top: 70px;
+      }
+    }
+  }
+
+  .two-state-box {
+    border: 2px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    min-height: 500px;
+
+    @media only screen and (max-width: $tablet) {
+      flex-direction: column;
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    .states {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @media only screen and (max-width: $tablet) {
+        flex-direction: row;
+      }
+
+      .state {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: #707070;
+        flex: 1;
+
+        &.active {
+          color: #ffffff;
+          background: url("../images/how-it-works-gradient.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+
+      p {
+        padding: 0 60px;
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 700;
+
+        @media only screen and (max-width: $tablet) {
+          font-size: 22px;
+          line-height: 30px;
+          padding: 5vw 10vw;
+        }
+
+        @media only screen and (max-width: $mobile) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .content-container {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: #d0f1f7 url("../images/how-it-works-content-gradient.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media only screen and (max-width: $tablet) {
+        min-height: 60vh;
+        align-items: flex-start;
+      }
+    }
+
+    .content {
+      position: absolute;
+      left: 0;
+      padding: 50px 80px;
+      color: #707070;
+      font-size: 19px;
+      line-height: 30px;
+      transition: transform 0.75s ease, opacity 0.75s ease;
+      opacity: 0;
+      transform: scale(0.9);
+
+      &.active {
+        transition-delay: 400ms;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      @media only screen and (max-width: $tablet) {
+        padding: 5vw 10vw;
+      }
+
+      li {
+        margin-bottom: 25px;
+      }
+    }
+
+    .content-a {
+      position: relative;
+    }
+
+    .content-b {
+      opacity: 0;
+    }
+  }
+}

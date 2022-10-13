@@ -1,0 +1,196 @@
+$purple: #8246af;
+$lightBlue: #3e8ddd;
+$grey: #707070;
+
+$desktop: 1920px;
+$tablet: 1024px;
+$tabletPortrait: 768px;
+$mobile: 414px;
+
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  background: #fafafa;
+  background: black;
+
+  font-family: "Lato", sans-serif;
+  color: $grey;
+}
+
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 40px;
+  line-height: 65px;
+
+  @media only screen and (max-width: 1400px) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 35px;
+    line-height: 38px;
+  }
+}
+
+h2 {
+  font-size: 44px;
+  line-height: 55px;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+p,
+li {
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 400;
+
+  /*
+    @media only screen and (max-height: 900px) {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  */
+
+  @media only screen and (max-width: $desktop) {
+    line-height: 27px;
+    font-size: 17px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    line-height: 25px;
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    line-height: 25px;
+    font-size: 16px;
+  }
+}
+
+.section {
+  transition: opacity 0.5s ease;
+}
+
+#fp-nav {
+  @media only screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.purple {
+  color: $purple;
+}
+
+.ultra-bold {
+  font-weight: 800;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.card {
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 5vw 0;
+
+  @media only screen and (max-width: $tablet) {
+    padding: 12vw 0;
+    width: 80%;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 15vw 0;
+    width: 80%;
+  }
+
+  .text-container {
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    max-width: 625px;
+  }
+
+  .image-container {
+    position: relative;
+  }
+}
+
+#fullpage {
+
+  @media only screen and (max-width: $tabletPortrait) {
+    overflow-x: hidden;
+
+    .section {
+      overflow: hidden;
+    }
+
+    .fp-scroller {
+      overflow: hidden;
+    }
+  }
+  &.delay {
+    transition-delay: 2s !important;
+  }
+  
+}
+
+.legal-container {
+  position: absolute;
+}
+.legal-image-text {
+  font-size: 14px;
+}
+
+#dl-container {
+  position: fixed;
+  top: 0;
+  right: 45px;
+
+  @media only screen and (max-width: $tablet) {
+    display: none;
+  }
+
+  @media only screen and (max-height: 600px) {
+    display: none;
+  }
+}
+/*
+@media only screen and (max-width: $lenovoMobile) {
+  .parrallax-cover {
+    transform: translateY(100vh);
+    transition: transform 700ms ease;
+  }
+
+  .parrallax-reveal {
+    transform: translateY(-100vh);
+    transition: transform 700ms ease;
+  }
+}
+*/

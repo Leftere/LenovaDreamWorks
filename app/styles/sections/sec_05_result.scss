@@ -1,0 +1,253 @@
+.section-result {
+  background: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+
+  @media only screen and (min-width: $tabletPortrait) and (min-height: 600px) {
+    .water {
+      filter: url('#turbulence');
+    }
+
+    &.counter-scroll {
+      transform: translateY(100vh) !important;
+      transition: all 900ms ease;
+      z-index: 5;
+    }
+
+    &.transparent {
+      opacity: 0%;
+      transition: opacity 300ms linear;
+    }
+
+    &.no-transition {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      transition: none !important;
+      z-index: 1;
+    }
+  }
+}
+
+.card-result {
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column;
+  }
+
+  &.sink {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: -webkit-transform 4700ms ease;
+    transition: transform 4700ms ease;
+  }
+
+  .text-container {
+    margin-right: 40px;
+
+
+    @media only screen and (min-width: $tablet) {
+      max-width: 550px;
+      margin-right: 80px;
+    }
+  }
+
+  .features-container {
+    margin-left: auto;
+    margin-right: 8vw;
+    max-width: 600px;
+
+    @media only screen and (max-width: $tablet) {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 60px;
+    }
+  }
+
+
+  .feature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 60px;
+
+    p {
+      font-size: 30px;
+      line-height: 36px;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      @media only screen and (max-width: $tablet) {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    img {
+      margin-right: 40px;
+
+      @media only screen and (max-width: $tablet) {
+        max-width: 50px;
+        margin-right: 40px;
+      }
+    }
+
+    .arrow-icon {
+      -webkit-transform: translateY(15vw) scale(8);
+      transform: translateY(15vw) scale(8);
+      -webkit-transition: -webkit-transform 0.5s ease-in, opacity 0.5s ease-in;
+      transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+      transition-delay: 0.6s;
+      will-change: transform;
+      opacity: 0;
+
+      @media only screen and (max-width: $tablet) {
+        -webkit-transition: -webkit-transform 0.35s ease-in, opacity 0.35s ease-in;
+        transition: transform 0.35s ease-in, opacity 0.35s ease-in;
+        transition-delay: 0.2s;  
+      }
+
+      &.active {
+        -webkit-transform: translate(0) scale(1);
+        transform: translate(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .server-icon {
+      -webkit-transform: translateX(-15vw);
+      transform: translateX(-15vw);
+      -webkit-transition: -webkit-transform 0.5s ease-in, opacity 0.5s ease-in;
+      transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+      will-change: transform;
+      transition-delay: 1.2s;
+      opacity: 0;
+
+      @media only screen and (max-width: $tablet) {
+        -webkit-transition: -webkit-transform 0.35s ease-in, opacity 0.35s ease-in;
+        transition: transform 0.35s ease-in, opacity 0.35s ease-in;
+        transition-delay: 0.5s;  
+      }
+
+      &.active {
+        -webkit-transform: translate(0) scale(1);
+        transform: translate(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .server-text {
+      -webkit-transform: translateX(15vw);
+      transform: translateX(15vw);
+      -webkit-transition: -webkit-transform 0.5s ease-in, opacity 0.5s ease-in;
+      transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+      will-change: transform;
+      transition-delay: 1.2s;
+      opacity: 0;
+
+      @media only screen and (max-width: $tablet) {
+        -webkit-transition: -webkit-transform 0.35s ease-in, opacity 0.35s ease-in;
+        transition: transform 0.35s ease-in, opacity 0.35s ease-in;
+        transition-delay: 0.5s;  
+      }
+
+      &.active {
+        -webkit-transform: translate(0) scale(1);
+        transform: translate(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .water-icon {
+      -webkit-transform: translate(0, -25vw) scale(0.8);
+      transform: translate(0, -25vw) scale(0.8);
+      -webkit-transition: -webkit-transform 0.5s ease-in, opacity 0.5s ease-in;
+      transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+      will-change: transform;
+      transition-delay: 2s;
+      opacity: 0;
+
+      @media only screen and (max-width: $tablet) {
+        -webkit-transition: -webkit-transform 0.35s ease-in, opacity 0.35s ease-in;
+        transition: transform 0.35s ease-in, opacity 0.35s ease-in;
+        transition-delay: 1s;  
+      }
+
+      &.active {
+        transform: translate(0) scale(1);
+        -webkit-transform: translate(0) scale(1);
+        opacity: 1;
+      }
+
+      &.transition {
+        transition-delay: 0ms;
+        -webkit-transform: translateY(130vh) scale(20);
+        transform: translateY(130vh) scale(20);
+        opacity: 0;
+
+        @media only screen and (max-width: $tablet) {
+          -webkit-transform: translateY(100vh) scale(10);
+          transform: translateY(100vh) scale(10);
+        }
+
+        @media only screen and (max-width: $tablet) {
+          -webkit-transform: translateY(200px) scale(5);
+          transform: translateY(200px) scale(5);
+        }
+      }
+
+      &.reset {
+        -webkit-transition: unset;
+        transition: unset;
+        transition-delay: 0ms;
+        -webkit-transform: translate(0) scale(1);
+        transform: translate(0) scale(1);
+        opacity: 1;
+      }
+
+      &.no-transition {
+        -webkit-transform: translate(0) scale(1) !important;
+        transform: translate(0) scale(1) !important;
+        transition-delay: 0ms;
+        -webkit-transition: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+      }
+    }
+
+    .water-text {
+      -webkit-transform: translate(8vw, 7vw);
+      transform: translate(8vw, 7vw);
+      -webkit-transition: -webkit-transform 0.5s ease-in, opacity 0.5s ease-in;
+      transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+      will-change: transform;
+      transition-delay: 2s;
+      opacity: 0;
+
+      @media only screen and (max-width: $tablet) {
+        transition: transform 0.35s ease-in, opacity 0.35s ease-in;
+        transition-delay: 1s;  
+      }
+
+      &.active {
+        transform: translate(0) scale(1);
+        opacity: 1;
+      }
+
+    }
+  }
+}
+
+.fake-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
